@@ -11,7 +11,7 @@ test('Basic css',async({page})=>{
      console.log(await page.title())
      await page.locator("text=CRM/SFA").click()
      await page.locator("//a[text()='Leads']").click()
-     await page.title()
+    console.log(await page.title())
 
      
 })
