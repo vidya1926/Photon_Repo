@@ -1,0 +1,87 @@
+Agenda:
+-----
+Accessmodifier
+Inheritance
+Encapsulation
+Polymorphism
+Abstraction
+POM integration
+===============
+
+AccessModifier -->visibility of class property or method
+public  --can be accessible within and outside the class
+Private  -can be accessible only within the class
+Protected -can be accessible only within the calss and with in the dereived classes(Child class )(When inherited)
+readonly  -constant -->not modifiable
+static  -->class refernce keyword -->method /property declared with static , then obj refernce is not required
+
+Encapsulation -->binding the the property and method in class
+private 
+get 
+set
+
+Inheritance --> acquire the property of parent to Child
+class to class
+abstract class to abstract class
+abstractclass to class
+
+class extends another class
+abstractclass extends another Abstractclass
+class extends abstractclass
+
+single Inheritance 
+class B extends classA
+
+Hirerachial Inheritance
+classB extends class A
+classC extends class A
+
+Multi-level Inheritance
+class c extends class B 
+class B extends class A
+
+Multiple inheritance can be acheieved with interface
+
+POM -->page object model
+ segrating page elements and its action from testcase
+
+ loginPage.ts -->class Loginpage -username,password,login
+ homePage.ts -->class  homePage -appLauncher
+ 
+
+ test.spec.ts-->create object for homePage call the methods
+
+ Polymorphism -->method can take many forms
+ method(one argument)
+ method(multiple arguments)
+
+Method overloading
+
+ eleement.fill("",3000)
+ element.fill("")
+
+ a method with same name with number of arugments/different types of arguments within a same class 
+
+ Method Overriding 
+    when two classes in relationship 
+    same method with same argument in different classes which is inherited with different implementation
+
+ parent{
+     click(){
+
+     }
+ }
+childClass extends parent{
+    click(){
+
+    }
+}
+
+
+Abstraction : hide the unnecessary info to the user, providing requried details
+-----------
+100% interface 
+abstract class-> 0 -100% 
+
+reusability
+scalability 

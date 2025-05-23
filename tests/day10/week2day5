@@ -1,0 +1,22 @@
+Agenda:
+------
+Persistent context
+codegen -Playwright inspector -record and play back 
+Basics of API
+Playwright with API -Integration
+-------------------
+Persistent context -->to run in normal browser
+codegen -->codegenerator
+
+---------
+API Testing -->
+ APIRequestContext-->browserContext
+
+documentation
+endpoints + authentication
+request methods +headers
+payloads
+response status
+
+
+

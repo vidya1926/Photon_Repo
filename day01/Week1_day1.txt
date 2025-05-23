@@ -1,0 +1,148 @@
+
+📑 Agenda for day 01 - Introduction to JavaScript
+
+📌 JS Introduction and History
+📌 Primitives Data Types
+📌 Variables
+📌 Operators and Conditional statements
+------------------------------------------------------  
+
+Javascript -->scripting language
+  prototype based 
+  event driven architecture
+  single threaded language
+  synchronous or asynchronous language
+  client -server side -->Full stack development 
+
+  ECMA Script -->Eurpoean Computer Manufacture Association
+
+  function login(){
+
+  }
+  function credentials(){
+
+  }
+
+  login(credentials)
+
+
+  file -->camelcase
+       -->learnBasicJs
+ Folder-->PascalCase
+        -->Photon_JS_Learning
+dont't -->whitespace between the filename 
+
+Datatypes 
+------
+Primitives and non primitive 
+
+primitive
+number
+boolean
+string
+bigInt
+symbol
+
+decaraling a value
+var variablename=type of data
+
+var personName="" /'' /`` (backtick)
+var height= 5.3 /230/34.56/789002373930
+var isActive=true/false
+
+var bigIntValue= 1237489036920478933n
+symbol("id")
+
+undefined  -->declare a variable without any -->undefined
+null -->explicitly marking the value of the variable as null 
+any -->unknown type of data
+
+var
+let 
+const
+
+let variable= ""  -->cannot redeclare
+ let fname="vidya"
+ let fname ="" not allowed
+ fname=""
+const vriable=""
+
+
+Var vs let vs const
+
+var -->allowed to redeclare, reassign the value
+let -->not allowed to redeclare and allowed to reassign
+const -->final (constant)-->not allowed to redeclare or reassign
+
+scoping 
+var -->functional scoped
+let and const-->block scoped
+{
+    let 
+}
+
+console() 
+
+hoisting  -moving the declaration to the top
+--------- 
+
+var -->hoisting will be happening  
+let and const -->refernce error (temporal dead zone)
+
+
+Operators
+--------
+=
++
+-
+/ 
+% -mod
+
+==
+>=
+<=
+
+== comparision and ===  -->strict equality
+
+++
+--
+&& 
+||
+
+
+for -->index
+forEach -->handling with the data
+for of -->handling the data
+for in -->object based accessing the data
+
+
+while(nxtelement.isVisible()){
+    nxtElement.click()
+}
+
+
+Array:
+-----
+  collection of elements of same Datatypes
+  int[] =1234
+  String[] =""
+  fixed in size
+  Js -->collection of elements of mixed Datatypes
+    -->grow or shrink  -->dynamic array
+
+class a
+    public selector=[]
+class b
+    public selector =[
+        ...selector,
+
+    ]
+
+    for(a){
+        for(b){
+            a[i]==b[i]
+            commonelement.push(a[i])
+        }
+
+    }
+

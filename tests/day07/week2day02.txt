@@ -1,0 +1,87 @@
+Agenda:
+------
+Alert
+classroom
+Frame
+classroom
+Break
+WindowHandle
+classroom
+file upload/download
+
+--------------------------------------------------------------
+
+
+Alert: message popup 
+
+    notification/meaasage/ information from application
+    javascript function
+
+   - Modal Alert
+        not inspectable
+        cannot ignore it
+     3 types 
+       simple alert  ok button -->accept the functionality and then handle the application
+       prompt alert  -->allow to type in the alert box along with ok/cancel -->accept or reject
+       confirmation alert -->ok /cancel -->accept /reject
+
+    -Non modal alert(Sweet alert)
+     inpectable -can be handled as a normal ele
+     cannot be ignored
+
+
+Playwright auto-dismisses the alert
+ 2 ways 
+    page.on  -> alert is not predictable , customize the type of alert to be accepted/rejected
+    page.once -->helps to handle the the known alert once in the page 
+                once it is handled , the event will be removed from action
+
+
+---------------------------------------------
+
+Frames:
+-------
+ iframe -inline frame 
+
+   one application embedded into another application
+    html is placed another html
+<html>
+ <iframe>
+    <html>
+    </html>
+  </iframe>
+</html>
+
+dom -->//iframe
+right on the ele -->view framesource and reload frame
+
+
+frame index
+frameobject
+  url based  
+frameLocator
+
+
+
+
+
+
+fn emp(empName:string,isActive=true,phno?:number){
+
+}
+
+emp("Vidya",false)
+
+
+
+
+
+
+
+
+
+
+
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm
+
+https://forms.office.com/r/H0MTB0yW68

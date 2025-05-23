@@ -1,0 +1,28 @@
+{
+  "name": "photon_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-qa": "npx playwright test readEnvData.spec.ts --config=playwright.qa.config.ts",
+    "test-prod": "npx playwright test readEnvData.spec.ts --config=playwright.prod.config.ts",
+    "test-all": "npm run test-qa && npm run test-prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.14",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "axios": "^1.9.0",
+    "csv-parse": "^5.6.0",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.5.0",
+    "path": "^0.12.7"
+  }
+}

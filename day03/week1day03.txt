@@ -1,0 +1,64 @@
+Agenda:
+------
+Promise -then catch async and await
+Playwright basics ->
+Playwright Locators -css xpath playwrightlocators dropdown
+
+
+Promise -3states
+creating the promise -->Pending state
+sucessfull ->fullfilled
+failure -->rejected
+
+get username -->response with data 
+patch -->
+
+
+locating -->actionability check 
+
+isvisble
+isenabled
+able to recieve event  -->overlap 
+editable
+ele attached dom or not
+
+
+video 
+screenshot
+tracing -->debug -
+by default -->headless and in incognito mode (isolated environment)
+
+java, js,ts --->Websocket protocl -->pw node js server -->browser
+
+
+browser  -->chromium(chrome, edge), firefox(nightly) and webkit (safari)
+browserContext -->window
+page -->tab
+
+
+npm init playwright@latest
+
+playwright 3 layers of configuration
+
+global -low priority
+project
+test -high priority
+
+
+DOM -->Document Object Model
+
+<html> -->root element
+
+
+css 
+---
+#idValue
+[id=value]
+tagname[id=value]
+
+.classValue
+[class=value]
+tagname[class=value]
+
+tagname[for=value]
+tagname[placeholder=value]

@@ -1,0 +1,26 @@
+Agenda
+------
+API utility code
+Geolocation & Device Emulation
+Break 
+Network interception
+OOPs-Class,object,Constructor and Accessmodifier
+Assessment- on API
+----------------------------------------------
+
+
+Class  -design -->property and method
+object -refernce to the class
+Constructor -initializes the object (memory allocation)
+Accessmodifier -->scope on property and method
+ let /const -->variable
+
+ property --> name:string
+              phno:number
+              id:number
+              active:boolean
+
+Inheritance
+Polymorphism  -->
+Encapsulation
+Abstraction

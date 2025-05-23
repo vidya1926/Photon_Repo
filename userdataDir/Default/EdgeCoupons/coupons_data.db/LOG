@@ -1,0 +1,5 @@
+2025/05/16-15:29:08.629 26fc Creating DB C:\Users\DELL\Desktop\Photon_JS\userdataDir\Default\EdgeCoupons/coupons_data.db since it was missing.
+2025/05/16-15:29:08.648 26fc Reusing MANIFEST C:\Users\DELL\Desktop\Photon_JS\userdataDir\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2025/05/16-15:29:10.749 37bc Level-0 table #5: started
+2025/05/16-15:29:10.758 37bc Level-0 table #5: 670793 bytes OK
+2025/05/16-15:29:10.763 37bc Delete type=0 #3

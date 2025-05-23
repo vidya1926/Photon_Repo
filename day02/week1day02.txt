@@ -1,0 +1,42 @@
+ Agenda:
+ ------
+ Array -sort,filter,map,reduce
+ String
+ classroom
+ Break
+ stringMethods
+ Functions - 
+ Function Declartion,
+    Function Expression,
+    Anonymous function, 
+    Asynchronous function, 
+    Arrow Function
+    Callback function 
+
+ Assessment -6PM to 7 PM 
+
+
+
+String -->sequence of character 
+let name=""/''/`` (a,x,r,g,t)
+
+`${variableName}` -->template literal
+
+method() -->class
+function() -->independent method
+
+
+1. function declartion  -->hoisted
+function fnName(arg){
+    return data
+}
+
+2. function Expression
+let sum= function math(a,b){
+    console.log(a+b)
+}
+
+sum(2,3)
+
+
+login(vaidateuser (fetchdata))

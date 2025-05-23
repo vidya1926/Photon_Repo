@@ -1,0 +1,43 @@
+Jira Integration with Playwright
+Playwright with Cucucmber
+Classroom
+Framework walkthrough
+Jenkins integration
+----------------------------
+
+BDD -->Behaviour Driven Development
+Gherkin keyword
+ Given, When,then And But
+
+ Feature  -->Gherkin language
+ Stepdefinition -->logic written with programming language
+ runner  -->execution  .js/.
+ 
+ Pre-Requirements
+  -----
+   install cucumber plugin  
+      npm install @cucumber/cucumber
+   install playwright 
+    npm init playwright 
+   install typescript
+    npm install ts-node typescript  --save-dev
+    tsc --init
+
+step:1 create a folder 
+           create a file for scenario description using gherkin language
+S
+
+Before -->before each feature
+After --->after each feature
+BeforeStep -->before each feature step
+AfterStep -->after each step
+
+
+
+Step:1 
+download jenkins.io lts --> .war
+
+step2 : goto the downloaded path
+          open the command prompt --> java -jar jenkins.war
+          java -->version >17
+Step:3 

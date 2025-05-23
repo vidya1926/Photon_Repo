@@ -1,0 +1,27 @@
+Agenda:
+------
+Custom Fixture -->to create predefined set of logic to be available in the test()
+Visual regression testing
+Jira Integration
+Basic Cucumber with Playwright
+Assessment-POM
+====================================================
+Visual regression testing
+-------------------------
+
+
+fetch the data from 
+let today=new Date()
+today.get
+
+
+Jira: 3rd party application
+---- --------------------
+
+jiraClient -->api library
+axios -->common api library 
+
+npm install axios 
+
+To get jira api key
+Profile-->accountSetting-->security-->API token-->create token 

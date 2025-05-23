@@ -1,0 +1,94 @@
+Agenda:
+-----
+Reading ENV file
+Annotations
+Tags
+Hooks 
+StorageState -skip Login
+Assessment
+
+-------------------
+.env file
+qa
+dev
+db
+api
+
+npm install dotenv
+
+create qa.env file  
+ SF_Username=
+ SF_Password
+
+ spec.ts 
+
+$env:file = 'qa'
+$env:file='' -->prod data will be read
+ 
+ Test Annotations
+ --------------
+ test.only -->focus the tests marked only
+ test.skip -->skipped from the execution
+ test.fixme --> marks the test needs fix
+ test.fail -->make the test fail  -->pass -status
+ test.slow -->triple the default timout 
+ test.describe -->to group -->  default,serial, parallel , retries
+ test.info -->provides the information on current running test ->title, status
+
+ -------------
+ test.beforeAll -->reporter -->execute only once among all the test
+ test.beforeEach -->before for each test 
+ test.afterEach  -->after each test 
+ test.afterAll --after all the test
+----------
+  
+ 
+  
+Assessment: 
+1 Launch the browser and navigate to https://www.tatacliq.com/. 
+2  Mouse hover on the “Brands” menu option. 
+3  Mouse hover on “Watches & Accessories” under the Brands submenu. 
+4  From the “Featured Brands”, click the first brand option that appears. 
+5  On the brand listing page, select "Sort By: New Arrivals" from the sort dropdown. 
+6  Under the left sidebar filters, expand “Categories” and select “Men”. 
+7  Wait for product list to update and print all the prices of displayed watches. 
+8  Click on the first watch from the resulting product grid. 
+9  If any alert popup appears (e.g. confirmation or promo), handle it accordingly. 
+10  On the watch detail page, compare the price shown here with the one from the listing page. 
+11 Click the "Add to Cart" button. 
+12 Capture the item count from the cart icon. 
+13 Click the cart icon to view the cart. 
+14 Take a screenshot of the cart page. 
+15 Close all the opened windows/tabs one by one. 
+  
+Assessment :2 
+1) Launch the app login.salesforce.com 
+2) Login with the credentials (Use json file to read the credentials)
+3) Click Login
+4) Click App Launcher
+5) Click ViewAll
+6) Search Contacts
+7) click Contacts
+8) Click New Contact
+9) Pick Salutation as 'Mr.'
+10) Enter First Name
+11) Enter Last Name 
+12) Enter email 
+Note: use csv file to read first name , lastname and email
+13) Create a New Account for Account Name
+14) Enter account name as 'Credits' and save
+15) Click and save
+16) Verify contact using Unique name and print the name
+
+
+
+
+
+
+
+
+
+
+
+
+

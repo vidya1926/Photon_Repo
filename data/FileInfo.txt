@@ -1,0 +1,9 @@
+ Enter username 
+ - Enter password 
+ - Click Login 
+ - Click App Launcher icon 
+ - Click View All 
+ - Enter Accounts in App Launcher search box 
+ - Click Accounts
+  - Click on first available Account name
+  -Upload the file 

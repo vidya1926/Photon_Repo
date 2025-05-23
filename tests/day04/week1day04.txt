@@ -1,0 +1,133 @@
+Agenda:
+=====
+css
+playwright Locators
+classroom
+dropdown
+classroom 
+xpath
+----------------------
+
+
+CSS 
+---
+id 
+==
+#idValue
+tagname#idValue
+tagname[id=value]
+
+---------------
+
+class
+====
+.classValue
+tagname.classValue
+tagname[class=classvalue]
+
+
+using multiple attributes
+-------------------
+tagname#idValue[attribute=attibuteValue]
+tagname.classValue[attribute=attibuteValue]
+
+text
+---
+[text=value]
+tagname[text=vlaue]
+
+partial matches 
+-------------
+prefix  [attribute^='attributeValue'] --> [class^='inventory'] 
+suffix  [attribute$='attributeValue'] ---> [class$='name']
+contains [attribute*='attributeValue'] --> [class*='item']
+
+---------
+parent to child
+
+p childtagname[] 
+grandparent to grandchild
+========================
+
+
+Use Basic Css
+=============
+Login to leaftaps application
+username demoCSR
+password crmsfa
+click crmsfa
+Click Leads
+Click CreateLead
+Fill the fields CompanyName, firstname and Lastname
+Click submit
+-------------------------------------------------
+xpath:
+-----
+Basic Xpath 
+          1. Attribute based xpath
+          2. Text Based xpath
+          3. Partial text based xpath
+          3. Partial attribute based xpath
+          4. Collection based xpath
+
+Priority as to how to get your attribute:
+1. id
+2. name
+3. placeholder, aria-label
+4. class
+
+Advanced Xpath:
+--------------
+1. Parent to child
+2. Grandparent to child.
+3. Child to parent.
+4. Grandchild to GrandParent
+5. Elder sibling to Younger sibling.
+6. Younger sibling to Elder Sibling
+7. Elder cousin to Younger cousin
+8. Younger Cousin to Elder cousin.
+
+To prefer xpath over css:
+-------------------------
+//div[text()='Customer Ratings']/following::div[@title='4★ & above']//input
+let ratings='4* &above'
+//div[text()='+ratings+']/preceding-sibling::input
+
+playwright locators
+-------------------
+getbyRole -->button,checkbox,radiobutton,link,
+getByText -->text based locator
+getByLabel -->label based locator
+getByTitle -->title attribute
+getByPlaceholder -->place holder attribute
+getByaltText --> <img text
+getBytestId -->data-testId
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test Steps: using Playwright Locators
+---------------------------------------
+1. Login to https://login.salesforce.com 
+credentials 
+vidyar@testleaf.com
+Sales@123
+2. Click on the toggle menu button from the left corner
+3. Click View All and Search Individuals from App Launcher
+4.Click the link Individuals
+5. Click on New 
+6. Enter the Last Name as 'Your name'
+7. Click save 

@@ -1,0 +1,27 @@
+Agenda:
+------
+WindowHandle
+classroom
+File upload/download
+Break
+Read Json and CSV Data
+classroom
+=================
+
+
+fileupload -->fill()
+            -->event listener
+
+file download -->event listener
+
+Json File
+---------
+ file extention  - .json
+ csv -->comma separated data
+
+  .csv
+  TestcaseId,USername,Password
+  Tc001,demoSalesManager,crmsfa
+  Tc002,democsr,crmsfa
+
+  step: 1 install csv-parse
