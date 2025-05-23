@@ -8,6 +8,7 @@ test('Basic css',async({page})=>{
     //await page.locator(".inputLogin[id=password]").fill("crmsfa")
      await page.fill(password,pwdValue)
      await page.locator(".decorativeSubmit").click()
+     console.log(await page.title())
      await page.locator("text=CRM/SFA").click()
      await page.locator("//a[text()='Leads']").click()
 })
