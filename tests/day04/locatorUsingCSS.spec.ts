@@ -12,4 +12,6 @@ test('Basic css',async({page})=>{
      await page.locator("text=CRM/SFA").click()
      await page.locator("//a[text()='Leads']").click()
      await page.title()
+
+     
 })
