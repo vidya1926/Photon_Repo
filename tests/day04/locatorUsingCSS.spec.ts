@@ -13,5 +13,5 @@ test('Basic css',async({page})=>{
      await page.locator("//a[text()='Leads']").click()
     console.log(await page.title())
 await page.locator("//a[text()='Create Lead']").click()
-     
+     console.log("Webhook trigger")
 })
