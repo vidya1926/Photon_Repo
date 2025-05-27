@@ -29,7 +29,9 @@ export default defineConfig({
     {
       name: 'Chrome',    
       // grep:[/smoke/,/regression/],
-        use: { ...devices['Desktop Chromium'],
+        use: { browserName:'chromium',
+          ...devices['Desktop Chromium']
+        ,
           channel:'chrome',
           viewport:null,
           launchOptions:{

@@ -1,0 +1,253 @@
+Install Jenkins
+  admin and password
+
+  java -jar jenkins.war httpPort=8081
+
+   open the localhost:8080
+    username admin
+    password: windows+R -->.jenkins -->secert -->initialAdminPassword file 
+
+    Manage plugin -->available plugin 
+    Pipeline plugin
+    HTML publisher
+    BlueOcean
+    Email notiification 
+
+Freestyle Project
+----------------
+create job ->clicking New item
+            Select Freestyle project and name it  -->give ok
+            General -> Description of the Project
+            Build steps 
+             AddBuildStep -->for windows
+             Execute windows batch command
+              C:/ E:  -->directory where the code is available
+               cd path of the file
+               npm ci 
+             Add step
+             C:/ E:  -->directory where the code is available
+               cd path of the file
+               npx instal playwright --with-Description
+             Add step
+             C:/ E:  -->directory where the code is available
+               cd path of the file
+               npx playwright test
+Freestyle with Git config
+----------------------
+create job ->clicking New item
+            Select Freestyle project and name it  -->give ok
+            General -> Description of the Project
+            SCM -->select git 
+             add repo path http:/<url> .git
+             check the branch name as master/main 
+            Build steps 
+             AddBuildStep -->for windows
+             Execute windows batch command
+                   npm ci 
+             Add step
+                    npx instal playwright --with-Description
+             Add step
+                    npx playwright test
+Freestyle with webhook configuration and parametrizing the job
+--------------------------------------------------------------
+ download ngrok -->add authentication --> ngrok http 8080
+ --------------------------------
+In Github repo -->settings of your repository
+    Webhook -->add Webhook 
+     http://<ip address>/github-webhook/
+     check for every push event 
+     check Active
+
+create job ->clicking New item
+            Select Freestyle project and name it  -->give ok
+            General -> Description of the Project
+            Select This project is parametrized and add the parameters
+            Example Choice parameter will support to choose the item
+            SCM -->select git 
+             add repo path http:/<url> .git
+             check the branch name as master/main 
+            Build steps 
+             AddBuildStep -->for windows
+             Execute windows batch command
+                   npm ci 
+             Add step
+                    npx instal playwright --with-Description
+             Add step
+                npx playwright test locatorUsingCSS.spec.ts --project=%browser%
+
+Groovy pipeline syntax
+Jenkins with pipeline job:(Set the file path from Local system)
+------------------------
+Create a new item -->select Pipeline 
+    General -Description of project
+     Build steps 
+     Pipeline Groovy syntax to be added
+  
+  pipeline {
+    agent any
+    environment {
+        NODE_ENV = 'test'  // Specifies the environment as testing
+    }
+
+stages {
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    // Change directory to Playwright project and install dependencies
+                    dir('C:\\Users\\DELL\\Desktop\\Photon_JS') {
+                        bat 'npm install'
+                    }
+                }
+            }
+        }
+        stage('Install Playwright Browsers') {
+            steps {
+                script {
+                    // Install Playwright browsers
+                    bat 'npx playwright install'
+                }
+            }
+        }
+        stage('Run Playwright Tests') {
+            steps {
+                script {
+                    // Execute Playwright test with an HTML reporter
+                    dir('C:\\Users\\DELL\\Desktop\\Photon_JS') {
+                        bat 'npx playwright test LoginFunctionality.spec.ts --reporter=html'
+                    }
+                }
+            }
+        }
+}
+post {
+  always {
+  script {
+  publishHTML(target: [
+                    allowMissing: false,   
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'C:\\Users\\DELL\\Desktop\\Photon_JS\\playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report',
+                    reportTitles: 'Test Execution Report'
+                ])
+            }
+        }
+      
+    }
+}
+
+
+                
+Jenkins with pipeline job:(Using git repo)
+------------------------
+Create a new item -->select Pipeline 
+    General -Description of project
+     Build steps 
+     Pipeline Groovy syntax to be added
+  
+ pipeline {
+    agent any
+    environment {
+        NODE_ENV = 'test'
+    }
+    stages {
+        stage('Clone from GitHub') {
+            steps {
+                // Clone your GitHub repository
+                git url: 'git repo url.git', branch: 'master'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install'
+            }
+        }
+        stage('Run Playwright Tests') {
+            steps {
+                bat 'npx playwright test tests/basicXPath.spec.ts --reporter=html'
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report',
+                    reportTitles: 'Test Execution Report'
+                ])
+            }
+        }
+    }
+}
+
+
+Jenkins job with Parametrized syntax
+------------------------------------
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'GIT_BRANCH', defaultValue: 'master', description: 'Git branch to build from')
+        string(name: 'TEST_FILE', defaultValue: 'tests/basicXPath.spec.ts', description: 'Playwright test file to execute')
+        string(name: 'NODE_ENV', defaultValue: 'test', description: 'Node environment')
+    }
+
+    environment {
+        NODE_ENV = "${params.NODE_ENV}"
+    }
+
+    stages {
+        stage('Clone from GitHub') {
+            steps {
+                git url: 'https://github.com/vidya1926/PWMARCH.git', branch: "${params.GIT_BRANCH}"
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run Playwright Tests') {
+            steps {
+                bat "npx playwright test ${params.TEST_FILE} --reporter=html"
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report',
+                    reportTitles: 'Test Execution Report'
+                ])
+            }
+        }
+    }
+}
+
+

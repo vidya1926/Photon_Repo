@@ -8,10 +8,6 @@ import dotenv from 'dotenv'
 const filename=process.env.file || 'prod'
 dotenv.config({path:`data/${filename}.env`})
 
-console.log(process.env.LT_Username)
-
-
-
 test(`Read Env data `,async({page})=>{
    
     await page.goto("http://leaftaps.com/opentaps/control/main")
